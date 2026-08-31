@@ -35,3 +35,14 @@ outside roughly one-third to three times the average partition size. Very strict
 values around 1.4 or lower can be difficult for this heuristic rebalancing method to satisfy. The
 example prints partition size statistics, underflow/overflow counts, and histograms comparing
 regular k-means and balanced k-means for `float` input.
+
+## Multi-GPU all-neighbors to CAGRA graph
+
+`MULTI_GPU_ALL_NEIGHBORS_CAGRA_EXAMPLE` builds one unified CAGRA graph from a host FP32 dataset.
+It distributes overlapping all-neighbors clusters across the selected GPUs, merges their local kNN
+results by global vector ID into file-backed host storage, and prunes the merged kNN graph with the
+public CAGRA optimizer. It does not build independent GPU shards and therefore does not have a
+post-build stitching phase.
+
+See [the all-neighbors CAGRA guide](cpp/ALL_NEIGHBORS_CAGRA.md) for the algorithm, file formats,
+memory model, parameter guidance, limitations, and a complete 4-GPU command.

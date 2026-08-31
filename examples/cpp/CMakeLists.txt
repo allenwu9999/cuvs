@@ -49,6 +49,7 @@ add_executable(HNSW_ACE_EXAMPLE src/hnsw_ace_example.cu)
 add_executable(HNSW_OPENAI_EXAMPLE src/hnsw_openai_example.cu)
 add_executable(IVF_FLAT_EXAMPLE src/ivf_flat_example.cu)
 add_executable(IVF_PQ_EXAMPLE src/ivf_pq_example.cu)
+add_executable(MULTI_GPU_ALL_NEIGHBORS_CAGRA_EXAMPLE src/multi_gpu_all_neighbors_cagra_example.cu)
 add_executable(VAMANA_EXAMPLE src/vamana_example.cu)
 add_executable(SCANN_EXAMPLE src/scann_example.cu)
 
@@ -77,6 +78,9 @@ target_link_libraries(HNSW_ACE_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXIST
 target_link_libraries(HNSW_OPENAI_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>)
 
 target_link_libraries(IVF_PQ_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>)
+target_link_libraries(
+  MULTI_GPU_ALL_NEIGHBORS_CAGRA_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>
+)
 target_link_libraries(IVF_FLAT_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>)
 target_link_libraries(VAMANA_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>)
 target_link_libraries(SCANN_EXAMPLE PRIVATE cuvs::cuvs $<TARGET_NAME_IF_EXISTS:conda_env>)
