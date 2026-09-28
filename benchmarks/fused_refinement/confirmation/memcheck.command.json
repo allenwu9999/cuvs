@@ -1,0 +1,1 @@
+["/bench/tools/cuda_sanitizer_api-linux-x86_64-12.9.79-archive/compute-sanitizer/compute-sanitizer", "--tool", "memcheck", "--error-exitcode", "99", "/bench/bench", "--rows", "1024", "--queries", "33", "--dim", "137", "--candidates", "47", "--k", "23", "--invalid", "--methods", "0,4,8,16,32,108,116,132", "--rounds", "1", "--repeats", "1"]

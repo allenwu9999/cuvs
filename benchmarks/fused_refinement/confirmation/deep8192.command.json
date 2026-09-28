@@ -1,0 +1,1 @@
+["/bench/bench", "--data", "/datasets/deep/base.fbin", "--rows", "1000000", "--queries", "8192", "--methods", "0,8,16", "--rounds", "11", "--repeats", "7"]

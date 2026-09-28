@@ -1,0 +1,1 @@
+["/bench/bench", "--queries", "1048576", "--methods", "0,16,32,116,132", "--rounds", "11", "--repeats", "7"]
